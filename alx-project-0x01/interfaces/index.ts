@@ -24,6 +24,15 @@ export interface UserProps {
   };
 }
 
+export interface UserData extends UserProps {}
+
+export interface UserModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onSubmit: (post: UserProps) => void; // ← Required to pass validation
+}
+
+
 export interface PostProps {
   userId: number;
   id: number;
