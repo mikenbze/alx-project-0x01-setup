@@ -1,4 +1,8 @@
-import Header from "@/components/layout/Header";
+// import Header from "@/components/layout/Header";
+import Header from "../../components/layout/Header";
+import React from "react";
+import UserCard from "../../components/common/UserCard"; // up two levels
+import { UserProps } from "../../interfaces";
 
 const Home: React.FC = () => {
   return (
