@@ -1,12 +1,4 @@
-export interface PostProps {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
-
-// src/interfaces/index.ts
-
+// interfaces/index.ts
 export interface UserProps {
   id: number;
   name: string;
