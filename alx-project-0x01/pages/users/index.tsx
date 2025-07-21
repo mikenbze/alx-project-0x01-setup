@@ -1,9 +1,6 @@
-
-// src/pages/users/index.tsx
 import React from "react";
-import { UserProps } from "@/interfaces";
-import Header from "@/components/layout/Header";
 import UserCard from "@/components/common/UserCard";
+import { UserProps } from "@/interfaces";
 
 interface UsersPageProps {
   posts: UserProps[];
@@ -11,14 +8,11 @@ interface UsersPageProps {
 
 const Users: React.FC<UsersPageProps> = ({ posts }) => {
   return (
-    <>
-      <Header />
-      <main className="p-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((user) => (
-          <UserCard key={user.id} user={user} />
-        ))}
-      </main>
-    </>
+    <div className="p-4 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      {posts.map((user) => (
+        <UserCard key={user.id} {...user} /> // 👈 Spread props
+      ))}
+    </div>
   );
 };
 
