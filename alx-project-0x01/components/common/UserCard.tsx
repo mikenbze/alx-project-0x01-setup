@@ -1,6 +1,3 @@
-// src/components/common/UserCard.tsx
-import React from "react";
-import { UserProps } from "@/interfaces";
 
 const UserCard: React.FC<{ user: UserProps }> = ({ user }) => {
   return (
@@ -25,3 +22,4 @@ const UserCard: React.FC<{ user: UserProps }> = ({ user }) => {
 };
 
 export default UserCard;
+
