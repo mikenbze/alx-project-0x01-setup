@@ -38,6 +38,11 @@ const Users: React.FC<UsersPageProps> = ({ posts }) => {
 
       {/* User Cards Grid */}
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      
+        {posts.map((user) => (
+          <UserCard key={`post-${user.id}`} {...user} />
+        ))}
+
         {users.map((user) => (
           <UserCard key={user.id} {...user} />
         ))}
